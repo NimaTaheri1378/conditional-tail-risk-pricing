@@ -20,6 +20,9 @@ jobs:
           test -f README.md
           test -f DATA_ACCESS.md
           test -f docs/replication.md
-          test -f docs/release/release_checklist.md
+          test -f docs/assets/results_manifest.json
+          test -f docs/assets/figures/headline_surface_to_returns.png
+          test -f docs/assets/figures/reversal_validation.png
+          test -f docs/assets/tables/headline_results.csv
       - name: Secret audit
         run: python -m ctrsdf.utils.secret_audit --root .
