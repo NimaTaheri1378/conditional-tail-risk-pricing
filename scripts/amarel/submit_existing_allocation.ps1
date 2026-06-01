@@ -1,0 +1,11 @@
+$ErrorActionPreference = "Stop"
+$Remote = "nt612@amareln.hpc.rutgers.edu"
+$Key = "$env:USERPROFILE\.ssh\id_ed25519_amarel_codex"
+$Project = "/scratch/nt612/Github/Conditional Tail-Risk Pricing in U.S. Equities"
+$JobId = "5752806"
+
+ssh -o BatchMode=yes -i $Key $Remote "mkdir -p '$Project'"
+scp -q -i $Key -r ./* "${Remote}:$Project/"
+ssh -o BatchMode=yes -i $Key $Remote "cd '$Project' && chmod +x scripts/amarel/*.sh && srun --jobid=$JobId --chdir='$Project' --output='$Project/artifacts/run_logs/schema_audit_%j.out' --error='$Project/artifacts/run_logs/schema_audit_%j.err' scripts/amarel/run_schema_audit.sh"
+ssh -o BatchMode=yes -i $Key $Remote "cd '$Project' && srun --jobid=$JobId --chdir='$Project' --output='$Project/artifacts/run_logs/smoke_%j.out' --error='$Project/artifacts/run_logs/smoke_%j.err' scripts/amarel/run_smoke.sh"
+ssh -o BatchMode=yes -i $Key $Remote "cd '$Project' && srun --jobid=$JobId --chdir='$Project' --output='$Project/artifacts/run_logs/full_%j.out' --error='$Project/artifacts/run_logs/full_%j.err' scripts/amarel/run_full.sh"

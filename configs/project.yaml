@@ -1,0 +1,59 @@
+project:
+  name: conditional-tail-risk-sdf
+  seed: 20260527
+  sample_start: "1996-01-01"
+  sample_end: "2026-03-31"
+  smoke_start: "2020-01-01"
+  smoke_end: "2020-03-31"
+  frequency: monthly
+
+paths:
+  root: "."
+  data_raw: "data/raw"
+  data_cache: "data/cache"
+  data_interim: "data/interim"
+  data_processed: "data/processed"
+  artifacts: "artifacts"
+  manifests: "artifacts/manifests"
+  logs: "artifacts/run_logs"
+  figures: "artifacts/figures"
+  model_cards: "artifacts/model_cards"
+
+wrds:
+  max_connections: 2
+  statement_timeout_ms: 0
+  chunk_rows: 500000
+  stop_on_auth_failure: true
+
+universe:
+  share_codes: [10, 11]
+  exchange_codes: [1, 2, 3]
+  min_price: 5.0
+  min_adv_usd: 1000000
+
+splits:
+  train_end: "2006-12-31"
+  validation_start: "2007-01-01"
+  validation_end: "2012-12-31"
+  holdout_start: "2013-01-01"
+  holdout_end: "2026-03-31"
+
+portfolio:
+  rebalance: monthly
+  quantiles: 10
+  gross_leverage: 1.0
+  max_weight: 0.02
+  beta_neutral: true
+  sector_neutral: true
+  cost_eta_grid: [0.05, 0.10, 0.20]
+
+models:
+  enabled:
+    - fama_macbeth
+    - elastic_net
+    - gradient_boosting
+    - random_forest
+    - ipca
+    - neural_sdf
+    - double_ml
+  gpu: true

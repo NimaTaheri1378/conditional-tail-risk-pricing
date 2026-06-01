@@ -1,0 +1,91 @@
+logical_tables:
+  crsp_daily:
+    candidates:
+      - crsp_a_stock.StkDlySecurityData
+      - crsp_a_stock.stkdlysecuritydata
+      - crsp.dsf
+      - crspq.dsf
+  crsp_monthly:
+    candidates:
+      - crsp_a_stock.StkMthSecurityData
+      - crsp_a_stock.stkmthsecuritydata
+      - crsp.msf
+      - crspq.msf
+  crsp_delists:
+    candidates:
+      - crsp_a_stock.StkDelists
+      - crsp_a_stock.stkdelists
+      - crsp.msedelist
+      - crspq.msedelist
+  crsp_names:
+    candidates:
+      - crsp_a_stock.StkSecurityInfoHist
+      - crsp_a_stock.stksecurityinfohist
+      - crsp.msenames
+      - crspq.msenames
+  ccm_links:
+    candidates:
+      - crsp_a_ccm.ccmxpf_linktable
+      - crsp.ccmxpf_linktable
+      - crspq.ccmxpf_linktable
+  comp_funda:
+    candidates:
+      - comp_na_daily_all.funda
+      - comp.funda
+      - comp_na_daily_all.Funda
+  comp_fundq:
+    candidates:
+      - comp_na_daily_all.fundq
+      - comp.fundq
+      - comp_na_daily_all.Fundq
+  option_surface:
+    candidates:
+      - optionm_all.vsurfd
+      - optionm_all.vsurfd
+      - optionm.vsurfd
+      - optionm_all.volsurf
+      - optionm.volsurf
+  option_names:
+    candidates:
+      - optionm_all.secnmd
+      - optionm_all.names
+      - optionm.names
+  option_security_price:
+    candidates:
+      - optionm_all.secprd
+      - optionm.secprd
+  option_raw_prefix:
+    candidates:
+      - optionm_all.opprcd
+      - optionm.opprcd
+  crsp_optionm_link:
+    candidates:
+      - wrdsapps_link_crsp_optionm.opcrsphist
+      - wrdsapps_link_crsp_optionm.optionm_crsp_link
+      - wrdsapps_link_crsp_optionm.crsp_optionm_link
+      - wrdsapps.optionm_crsp_link
+  cboe_vix:
+    candidates:
+      - cboe_all.cboe
+      - cboe_all.vix
+      - cboe.vix
+  ff_factors:
+    candidates:
+      - ff_all.factors_monthly
+      - ff.factors_monthly
+      - ff.fivefactors_monthly
+  ff_test_portfolios:
+    candidates:
+      - ff_all.portfolios25
+      - ff_all.portfolios_25_size_bm
+      - ff.portfolios_25_size_bm
+  treasury_daily:
+    candidates:
+      - crsp_a_treasuries.tfz_dly
+      - crsp.tfz_dly
+      - crspq.tfz_dly
+  frb_rates:
+    candidates:
+      - frb_all.rates_monthly
+      - frb_all.rates
+      - frb.rates

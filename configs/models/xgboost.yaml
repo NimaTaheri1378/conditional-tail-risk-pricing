@@ -1,0 +1,8 @@
+n_estimators: 1200
+learning_rate: 0.03
+max_depth: 4
+subsample: 0.8
+colsample_bytree: 0.8
+tree_method: hist
+device: cuda
+early_stopping_rounds: 50

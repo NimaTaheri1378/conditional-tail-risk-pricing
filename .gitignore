@@ -1,0 +1,50 @@
+# Secrets and local credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.pgpass
+pgpass
+
+# Vendor/proprietary data and heavy artifacts
+Conditional Tail-Risk Pricing in U.S. Equities.md
+data/raw/
+data/cache/
+data/interim/
+data/processed/
+artifacts/run_logs/
+artifacts/full/
+artifacts/smoke/
+artifacts/closeout/
+artifacts/figures/full/
+artifacts/figures/smoke/
+artifacts/manifests/*.json
+artifacts/manifests/*.parquet
+artifacts/**/*.parquet
+artifacts/**/*.pkl
+artifacts/**/*.pt
+artifacts/**/*.pth
+artifacts/**/*.joblib
+artifacts/**/*.zip
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+*.egg-info/
+.venv/
+venv/
+
+# Notebooks
+.ipynb_checkpoints/
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

@@ -1,0 +1,47 @@
+firm_characteristics:
+  - size
+  - book_to_market
+  - momentum_12_1
+  - reversal_1m
+  - operating_profitability
+  - asset_growth
+  - accruals
+  - net_issuance
+  - leverage
+  - cash_assets
+  - gross_profitability
+  - capex_assets
+  - rnd_intensity
+  - idiosyncratic_volatility
+  - amihud_illiquidity
+
+option_features:
+  - atm_iv_30
+  - atm_iv_60
+  - atm_iv_91
+  - skew_25d
+  - tail_slope_10p_25p
+  - curvature
+  - term_slope
+  - surface_pc1
+  - surface_pc2
+  - iv_minus_realized
+  - option_spread
+  - open_interest_depth
+
+state_variables:
+  - vix_level
+  - vix_change_21d
+  - market_realized_vol_21d
+  - market_drawdown
+  - treasury_slope
+  - short_rate
+  - median_option_skew
+  - index_option_skew
+
+interactions:
+  - skew_25d_x_vix_level
+  - skew_25d_x_leverage
+  - atm_iv_30_x_cash_assets
+  - tail_slope_10p_25p_x_asset_growth
+  - atm_iv_30_x_market_drawdown

@@ -1,0 +1,7 @@
+cff-version: 1.2.0
+title: Conditional Tail-Risk Pricing
+message: If you use this research code, please cite this repository.
+authors:
+  - family-names: Taheri
+    given-names: Nima
+date-released: 2026-05-31

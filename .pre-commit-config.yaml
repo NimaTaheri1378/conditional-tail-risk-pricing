@@ -1,0 +1,14 @@
+repos:
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.8.6
+    hooks:
+      - id: ruff
+        args: [--fix]
+      - id: ruff-format
+  - repo: local
+    hooks:
+      - id: secret-audit
+        name: Project secret audit
+        entry: python -m ctrsdf.utils.secret_audit --root .
+        language: system
+        pass_filenames: false

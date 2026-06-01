@@ -1,0 +1,23 @@
+{
+  "name": "surface_to_returns_results",
+  "status": "completed",
+  "outputs": {
+    "headline_figure": "docs/assets/figures/headline_surface_to_returns.png",
+    "headline_results": "docs/assets/tables/headline_results.csv",
+    "reversal_validation": "docs/assets/tables/reversal_validation.csv",
+    "strategy_variants": "docs/assets/tables/strategy_variants.csv",
+    "factor_attribution": "docs/assets/tables/factor_attribution.csv",
+    "feature_importance": "docs/assets/tables/feature_importance.csv"
+  },
+  "diagnostics": {
+    "feature_store_rows": 1622696,
+    "effective_coverage": "1996-01 to 2025-12",
+    "holdout_observations": 609605,
+    "selected_strategy": "raw_tail_slope_reversal_skip1_quarterly_smooth3",
+    "selected_net_ann_mean": 0.0150746353759362,
+    "selected_net_sharpe": 0.3169956749097448,
+    "selected_ff5_umd_alpha_t": 1.1534745827466857,
+    "raw_chain_atm_iv_correlation": 0.8265451411634953,
+    "benchmark_market_correlation": 0.9946607586277325
+  }
+}
